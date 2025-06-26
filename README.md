@@ -4,6 +4,18 @@ Througout this workshop we will reconstruct Rotterdam using different level of d
 
 ___
 
+#### Python environment
+First we will create a python environment to avoid any duplication issues with python libraries. 
+This implies two steps: 
+
+- mkdir -p reconstructions/Rotterdam
+- cd reconstructions
+- mkdir python-env
+- cd python-env 
+- cd reconstructions/Rotterdam
+- source ../python-env/bin/activate
+- pip install numpy, osmnx, geopy
+
 #### Input data
 
 1. Semantic surfaces and building footprints 
