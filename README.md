@@ -5,8 +5,8 @@ Througout this workshop we will reconstruct Rotterdam using different level of d
 ___
 
 #### Python environment
-First we will create a python environment to avoid any duplication issues with python libraries. 
-This implies two steps: 
+First we will create a python environment to avoid any duplication issues with your own python libraries. 
+This implies the following steps: 
 
 - mkdir -p reconstructions/Rotterdam
 - cd reconstructions
@@ -15,6 +15,8 @@ This implies two steps:
 - cd reconstructions/Rotterdam
 - source ../python-env/bin/activate
 - pip install numpy, osmnx, geopy
+
+___
 
 #### Input data
 
@@ -36,7 +38,7 @@ This python script requires the following input data
 1. A text file named `cities.txt` in the same directory where `fetch_osm.py` is placed.
 ```{.python .numberLines}
 #<city-name>, <country-code>, <center-lat>, <center-lon>, <output-EPSG-code>
-Rotterdam, NL, -4,570313, 29,228890, WGS:84
+Rotterdam, NL, 51.9225, 4.47917, EPSG:28992
 Barcelona, ESP, 41.39563705715212, 2.1619087803576256, EPSG:25831
 Denver, USA, 39.7392364, -104.984862, EPSG:4269
 ```
