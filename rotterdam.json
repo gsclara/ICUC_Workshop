@@ -1,0 +1,60 @@
+{
+  "point_clouds" :
+  {
+    "ground": "../../PC2/ground.laz",
+    "buildings" : "../../PC2/unclassified.laz"
+  },
+  "polygons" : [
+    {
+      "type": "Building",
+      "path": "../../polygons/data/antwerp_be_buildings.geojson",
+      "unique_id": "gid"
+    },
+    {
+      "type":       "SurfaceLayer",
+      "path":       "../../polygons/data/antwerp_be_water_cut.geojson",
+      "layer_name": "Water"
+    },
+    {
+      "type":       "SurfaceLayer",
+      "path":       "../../polygons/data/antwerp_be_vegetation.geojson",
+      "layer_name": "Vegetation"
+    }
+  ],
+  "reconstruction_regions": [
+    {
+      "influence_region":   1200,
+      "lod": "1.2",
+      "complexity_factor": 0.7
+    }
+  ],
+
+  "point_of_interest": [152162.34, 212352.107],
+  "influence_region":   4245,
+  "domain_bnd":         null,
+  "top_height":         738,
+
+  "bnd_type_bpg":      "Round",
+  "bpg_blockage_ratio": false,        
+  "flow_direction":     [1, 1],
+  "buffer_region":      10,
+  "reconstruct_boundaries": true,
+
+  "terrain_thinning": 90,
+  "smooth_terrain":   {
+    "iterations": 50,
+    "max_pts": 100000
+  },
+
+  
+  "building_percentile": 60,
+
+  "edge_max_len": 5,
+
+  "output_file_name":  "Mesh",
+  "output_format":     "obj",
+  "output_separately":  true,
+
+  "output_log": true,
+  "log_file": "logFile.log"
+}
