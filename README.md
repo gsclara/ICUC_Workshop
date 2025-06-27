@@ -80,6 +80,12 @@ tags = {
 
 3. Handling large water polygons: For certain cases it is important to split large water and vegetation polygons into multiple smaller polygons using QGIS so that they are imprinted within the region of interest. Typically City4CFD handles this quite well, but if the problem persists then it is advised to split the polygon into smaller polygons such that they fit within the region of interest.
 
+Now we need to run the fetch.py script:
+
+`python fetch.py > log.fetch`
+
+Saving a log will allow us to know where the center of our domain is in X,Y coordinates. 
+
 - **Fetch the Point cloud Data**
 
 Downloading the point cloud data does not have an automated method similar to the polygon data detailed in the previous section. This is mainly a consequence of LiDAR generation and maintenance methods which are heterogenous depending on the local municipality/agency hosting the data. 
@@ -114,6 +120,13 @@ las2las64 -i out.LAZ -keep_every_nth 2 -keep_class 6 -o buildings.LAZ
 
 - **Running city4CFD**
 
+To run city4CFD we will first create a folder for the results and then run the code pointing to that location. 
+
+`mkdir results`
+
+` ~/city4CFDintallationFolder/build/city4cfd rotterdam.json --output_dir results_LoD2`
+
+Then we can visualize the results with paraVIEW. 
 
 ___
 

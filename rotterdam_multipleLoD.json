@@ -22,6 +22,12 @@
     }
   ],
   "reconstruction_regions": [
+    
+     {                              
+       "influence_region":   500,
+       "lod": "2.2",
+       "complexity_factor": 0.7
+     }, 
     {
       "influence_region":   1200,
       "lod": "1.2",

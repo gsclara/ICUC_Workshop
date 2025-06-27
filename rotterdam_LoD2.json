@@ -24,7 +24,7 @@
   "reconstruction_regions": [
     {
       "influence_region":   1200,
-      "lod": "1.2",
+      "lod": "2.2",
       "complexity_factor": 0.7
     }
   ],
