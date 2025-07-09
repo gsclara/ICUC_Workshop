@@ -117,6 +117,9 @@ Extract building point cloud after thinning it by keeping every 2nd point in the
 ```
 las2las64 -i out.LAZ -keep_every_nth 2 -keep_class 6 -o buildings.LAZ
 ```
+*NOTE on Unclassified Point Clouds*
+
+While most point cloud datasets offered by local authorities are typically classified (e.g., The Netherlands, Germany, Japan [Tokyo]), this may not always be the case thus making the above detailed steps relatively challenging to split the data into terrain and buildings. However, there is a relatively simple solution for situations like this using the Cloth Simulation Filter (CSF) that automatically "classifies" the point cloud data into a relatively smooth terrain and non-terrain (may include Buildings, Trees, and other objects). Such a point cloud can be processed using the `city4cfd_pcprep` tool or `CloudCompare`[https://www.cloudcompare.org/] to split the point cloud data into terrain and building datasets. It is, however, important to note that in doing so, the building reconstruction may contain some spurious artefacts that can typically be resolved using a relatively lower building point cloud percentile in the `config.json` file.
 
 - **Running city4CFD**
 
